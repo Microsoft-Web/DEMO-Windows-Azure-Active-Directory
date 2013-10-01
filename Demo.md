@@ -52,20 +52,100 @@ Follow these steps to setup your environment for the demo.
 ## Demo ##
 This demo is composed of the following segments:
 
-1. [(TODO: Insert Segment 1 title here)](#segment1).
-1. [(TODO: Insert Segment 2 title here)](#segment2).
+1. [Creating a new organization web site](#segment1).
+1. [Running the organization's GeekQuiz](#segment2).
 
 <a name="segment1" />
-### (TODO: Insert Segment 1 title here) ###
+### Creating a new organization web site ###
 
-1. (TODO: Write step 1 here).
+1. Open the **File / New Project** dialog and show the options in the **Visual C# / Web** section.
 
-	![TODO](images/todo.png?raw=true "TODO")
+1. Name the application _GeekQuiz_ and click **OK**.
+
+	![Creating a new project](images/creating-a-new-project.png?raw=true "Creating a new project")
+
+	_Creating a new project_
+
+1. Select new **MVC** project and check the **Web API** option.
+
+1. Click **Change Authentication** button.
+
+	![Updating the authentication method](images/updating-the-authentication-method.png?raw=true "Updating the authentication method")
+
+	_Updating the authentication method_
+
+	> **Speaking Point:** VS tooling allows you to enable WAAD authentication easily. All you need is to provide your tenant domain name and administrator credentials, the two-way trust between your WAAD tenant and your web application is automatically configured
+
+1. On **Change Authentication** dialog, select **Organizational Accounts** option.
+
+	![Selecting the Organizational Accounts option](images/selecting-organizational-accounts.png?raw=true "Selecting the Organizational Accounts option")
+
+	_Selecting the Organizational Accounts option_
+
+1. 	Expand the first combo box in order to showcase the different posibilities.
+	
+	![Showing the organization account types](images/showing-the-organization-types.png?raw=true "Showing the organization account types")
+
+	_Showing the organization account types_
+
+1. 	Expand the **Access Level** combo box in order to showcase the different posibilities.
+
+	![Showing the access level posibilities](images/showing-the-access-level-options.png?raw=true "Showing the access level posibilities")
+
+	_Showing the access level posibilities_
+
+1. Enter your domain (ex. "mydomainname.onmicrosoft.com") as **Domain**.
+
+	![TODO](images/updating-the-domain.png?raw=true "TODO")
 
 	_TODO_
 
+1. Expand the **More Options** dialog by clicking the button at the end of the dialog.
+
+	![Showing more options](images/showing-more-options.png?raw=true "Showing more options")
+
+	_Showing more options_
+
+1. Click **OK** to continue.
+
+	![Completing the authentication update](images/completing-the-authentication-update.png?raw=true "Completing the authentication update")
+
+	_Completing the authentication update_
+
+1. Sing in using an admin account for your organization (ex. "admin@mydomainname.onmicrosoft.com")
+
+	![Signing in with an organization admin account](images/signing-in-with-an-organization-admin-account.png?raw=true "Signing in with an organization admin account")
+
+	_Signing in with an organization admin account_
+
+1. Back in **New ASP.Net Project** dialog, click **Create Project** button.
+
+	![Completing the project creation](images/creating-the-project.png?raw=true "Completing the project creation")
+
+	_Completing the project creation_
+
+	> **Speaking Point:** VS tooling configures two-way trust relationship between your app and your WAAD tenant. Your app is registered as a Relying Party of the tenant; and the tenant is configured as an Identity Provider of the app.
+
+1. **CTRL+F5** to run the web site.
+
+1.	Sign in using a user account for your organization (ex. "user@mydomainname.onmicrosoft.com").
+
+	![Signing in using one of the organization's user account](images/logging-in-with-an-organization-user.png?raw=true "Signing in using one of the organization's user account")
+
+	_Signing in using one of the organization's user account_
+
+1. Show that you are loggued as the organization's user. 
+
+	![Showing that you are logged as the organization's user](images/showing-the-organization-user-logged.png?raw=true "Showing that you are logged as the organization's user")
+
+	_Showing that you are logged as the organization's user_
+
+1. Close the browser
+
 <a name="segment2" />
-### (TODO: Insert Segment 2 title here) ###
+### Running the organization's GeekQuiz ###
+
+1. 
 
 ---
 
