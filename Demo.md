@@ -5,11 +5,9 @@
 <a name="Overview" />
 ## Overview ##
 
-1.       File / New / Configure WAAD in a new project
-2.       Jazz hands and say “we’ve merged those files and packages into our existing app, here’s what it looks like”
-3.       Deploy or show portal configuration in an already deployed site
- 
-So this would have a start state that has GeekQuiz with the WAAD stuff from a new MVC application using WAAD already merged in. I don’t know if there would even be an end state, since that would be pretty much ready to run.
+1. File / New / Configure WAAD in a new project.
+1. Showcase the GeekQuiz solution with WAAD Authentication
+1. Deploy or show portal configuration in an already deployed site
 
 <a id="goals" />
 ### Goals ###
@@ -145,7 +143,21 @@ This demo is composed of the following segments:
 <a name="segment2" />
 ### Running the organization's GeekQuiz ###
 
-1. 
+1. Open the **GeekQuiz.sln** solution located under **source\end-segment2**.
+
+1. **CTRL+F5** to run the web site.
+
+1.	Sign in using a user account for your organization (ex. "user@mydomainname.onmicrosoft.com").
+
+	![Signing in using one of the organization's user account](images/logging-in-with-an-organization-user.png?raw=true "Signing in using one of the organization's user account")
+
+	_Signing in using one of the organization's user account_
+
+1. Show that you are loggued as the organization's user. 
+
+	![Showing that you are logged as the organization's user](images/showing-the-geekquiz-with-waad.png?raw=true "Showing that you are logged as the organization's user")
+
+	_Showing that you are logged as the organization's user_
 
 ---
 
