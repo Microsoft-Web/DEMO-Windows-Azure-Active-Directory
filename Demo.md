@@ -33,10 +33,10 @@ Follow these steps to setup your environment for the demo.
 
 1. Follow the steps detailed in [this link](http://docs.nuget.org/docs/creating-packages/hosting-your-own-nuget-feeds) to setup local sources for the following directories:
 
-	* **C:\Program Files (x86)\Microsoft Web Tools\Packages**
-	* **C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Stack 5\Packages**
+	1. **C:\Program Files (x86)\Microsoft Web Tools\Packages**
+	1. **C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Stack 5\Packages**
 
-	![NuGet Sources](Images/nuget-sources.png?raw=true)
+	![NuGet Sources](images/nuget-sources.png?raw=true)
 
 1. Open Visual Studio 2013.
 1. Open the **GeekQuiz.sln** solution located under **source\begin**.
@@ -145,9 +145,47 @@ This demo is composed of the following segments:
 
 1. Open the **GeekQuiz.sln** solution located under **source\end-segment2**.
 
-1. **CTRL+F5** to run the web site.
+1. Right-click the **GeekQuiz** project and select **Publish…**
 
-1.	Sign in using a user account for your organization (ex. "user@mydomainname.onmicrosoft.com").
+	![Publishing the Website](images/publishing-the-site.png?raw=true "Publishing the Website")
+
+	_Publishing the Website_
+
+1. In the Publish dialog box, click **Import…**.
+
+	![Importing the publish profile](images/selecting-the-profile.png?raw=true "Importing the publish profile")
+
+	_Importing the publish profile_
+
+1. In the **Import Publish Profile** dialog select **Import from a publish profile file** and click on **Browse...** to select the previously downloaded publish profile file.
+
+	![Selecting the publish profile file](images/selecting-import-publish-profile.png?raw=true "Selecting the publish profile file")
+
+	_Selecting the publish profile file_
+
+1. Back in the **Import Publish Profile** dialog click **OK**.
+
+1. Back in the **Publish Web** dialog, click **Next >**.
+
+	![Reviewing the connection settings to deploy](images/reviewing-the-connection-settings-to-deploy.png?raw=true "Reviewing the connection settings to deploy")
+
+	_Reviewing the connection settings to deploy_
+
+1. In the settings tab, show the Organizational Authentication configuration.
+
+	![Showing the organizational authentication configuration](images/showing-the-organizational-auth-config.png?raw=true "Showing the organizational authentication configuration")
+
+	_Showing the organizational authentication configuration_
+
+1. Select the connection string for the **TriviaContext** and click **Publish** to publish the site.
+
+1. Sing in using an admin account for your organization (ex. "admin@mydomainname.onmicrosoft.com")
+
+	![Signing in with an organization admin account](images/signing-in-with-an-organization-admin-account.png?raw=true "Signing in with an organization admin account")
+
+	_Signing in with an organization admin account_
+
+1.	When the deployment is completed, sign in using a user account for your organization (ex. "user@mydomainname.onmicrosoft.com").
 
 	![Signing in using one of the organization's user account](images/logging-in-with-an-organization-user.png?raw=true "Signing in using one of the organization's user account")
 
@@ -158,6 +196,27 @@ This demo is composed of the following segments:
 	![Showing that you are logged as the organization's user](images/showing-the-geekquiz-with-waad.png?raw=true "Showing that you are logged as the organization's user")
 
 	_Showing that you are logged as the organization's user_
+
+1. Switch to the _Windows Azure Management Portal_.
+
+1. Navigate to the **Active Directory** section and select the one used for this demo.
+
+	![Selecting your active directory](images/selecting-your-active-directory.png?raw=true "Selecting your active directory")
+
+	_Selecting your active directory_
+
+
+1. Navigate to the **USERS** tab and show the users that you used for the demo.
+
+	![Showing the organization's users](images/showing-the-organization-users.png?raw=true "Showing the organization's users")
+
+	_Showing the organization's users_
+
+1. Navigate to the **APPLICATIONS** tab and show the new two applications.
+
+	![Showing the organization's applications](images/showing-the-geekquiz-application-in-the-portal.png?raw=true "Showing the organization's applications")
+
+	_Showing the organization's applications_
 
 ---
 
