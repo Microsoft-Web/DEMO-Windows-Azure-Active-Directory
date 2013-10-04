@@ -6,26 +6,21 @@
 ## Overview ##
 
 1. File / New / Configure WAAD in a new project.
-1. Showcase the GeekQuiz solution with WAAD Authentication
-1. Deploy or show portal configuration in an already deployed site
+1. Show the GeekQuiz solution with WAAD Authentication.
+1. Deploy and show portal configuration.
 
 <a id="goals" />
 ### Goals ###
 In this demo, you will see how to:
 
-1. (TODO: Insert goal 1 here)
-1. (TODO: Insert goal 2 here)
-1. (TODO: Insert goal 3 here)
+1. Create an application in Visual Studio that is automatically integrated with a Windows Azure Active Directory tenant.
+1. Deploy an existing application using Visual Studio to an Azure web site and have it automaitically integrate with a WAAD tenant.
 
 <a name="technologies" />
 ### Key Technologies ###
 
-- {TODO: Include technology name here} [here][1]
-- {TODO: Include technology name here}
-- [{TODO: Include technology name here}][2]
-
-[1]: http://insert_link_to_technology_1_here/
-[2]: http://insert_link_to_technology_2_here/
+- [Windows Azure Active Directory](http://www.windowsazure.com/en-us/services/active-directory/)
+- [Visual Studio 2013](http://www.microsoft.com/visualstudio/esn/products/2013-editions)
 
 <a name="Setup" />
 ### Setup and Configuration ###
