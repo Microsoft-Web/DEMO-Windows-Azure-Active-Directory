@@ -13,7 +13,7 @@
 ### Goals ###
 In this demo, you will see how to:
 
-1. Create an application in Visual Studio thuat is automatically integrated with a Windows Azure Active Directory tenant.
+1. Create an application in Visual Studio that is automatically integrated with a Windows Azure Active Directory tenant.
 1. Deploy an existing application using Visual Studio to an Azure web site and have it automaitically integrate with a WAAD tenant.
 
 <a name="technologies" />
