@@ -38,13 +38,17 @@ Follow these steps to setup your environment for the demo.
 
 	![NuGet Sources](images/nuget-sources.png?raw=true)
 
+1. Create a new [Windows Azure Active Directory tenant](http://msdn.microsoft.com/en-us/library/windowsazure/dn151790.aspx).
+
+1. Create a new website in Windows Azure.
+
+1. Add a database as a linked **Linked Resource**.
+
+1. Download the publishing profile. This is be required for segment #2.
+
+	> **Important:** At the time of writing, you can only create one AD per subscription and it cannot be deleted.
+
 1. Open Visual Studio 2013.
-1. Open the **GeekQuiz.sln** solution located under **source\begin**.
-1. If you don't have one, create a user account for the application. To do that, press **F5**, click **Register** and provide the information required. After that, close the browser window.
-
-	> **Note:** Remember the information you provided as you will be using it during the demo.
-
-1. In Visual Studio, close all open files.
 
 <a name="Demo" />
 ## Demo ##
@@ -56,7 +60,7 @@ This demo is composed of the following segments:
 <a name="segment1" />
 ### Creating a new organization web site ###
 
-1. Open the **File / New Project** dialog and show the options in the **Visual C# / Web** section.
+1. Open the **File / New Project** dialog and select the **Visual C# / Web** templates.
 
 1. Name the application _GeekQuiz_ and click **OK**.
 
@@ -64,41 +68,41 @@ This demo is composed of the following segments:
 
 	_Creating a new project_
 
-1. Select new **MVC** project and check the **Web API** option.
+1. Select the **MVC** template and enable **Web API**.
 
-1. Click **Change Authentication** button.
+1. Click **Change Authentication**.
 
 	![Updating the authentication method](images/updating-the-authentication-method.png?raw=true "Updating the authentication method")
 
 	_Updating the authentication method_
 
-	> **Speaking Point:** VS tooling allows you to enable WAAD authentication easily. All you need is to provide your tenant domain name and administrator credentials, the two-way trust between your WAAD tenant and your web application is automatically configured
+	> **Speaking Point:** VS tooling allows you to enable WAAD authentication easily. All you need is to provide your tenant domain name and administrator credentials, the two-way trust between your WAAD tenant and your web application is automatically configured.
 
-1. On **Change Authentication** dialog, select **Organizational Accounts** option.
+1. In the **Change Authentication** dialog, select **Organizational Accounts**.
 
 	![Selecting the Organizational Accounts option](images/selecting-organizational-accounts.png?raw=true "Selecting the Organizational Accounts option")
 
-	_Selecting the Organizational Accounts option_
+	_Selecting Organizational Accounts_
 
-1. 	Expand the first combo box in order to showcase the different posibilities.
+1. 	Expand the first combo box to show the different options.
 	
 	![Showing the organization account types](images/showing-the-organization-types.png?raw=true "Showing the organization account types")
 
 	_Showing the organization account types_
 
-1. 	Expand the **Access Level** combo box in order to showcase the different posibilities.
+1. 	Expand the **Access Level** combo box to show the different options.
 
 	![Showing the access level posibilities](images/showing-the-access-level-options.png?raw=true "Showing the access level posibilities")
 
 	_Showing the access level posibilities_
 
-1. Enter your domain (ex. "mydomainname.onmicrosoft.com") as **Domain**.
+1. Enter your domain (e.g.: "mydomainname.onmicrosoft.com") as **Domain**.
 
-	![TODO](images/updating-the-domain.png?raw=true "TODO")
+	![Setting the domain name](images/updating-the-domain.png?raw=true "TODO")
 
-	_TODO_
+	_Setting the domain name_
 
-1. Expand the **More Options** dialog by clicking the button at the end of the dialog.
+1. Click the button with the chevron to see more options.
 
 	![Showing more options](images/showing-more-options.png?raw=true "Showing more options")
 
@@ -110,21 +114,23 @@ This demo is composed of the following segments:
 
 	_Completing the authentication update_
 
-1. Sing in using an admin account for your organization (ex. "admin@mydomainname.onmicrosoft.com")
+1. Sign in using an admin account for your organization (e.g.: "admin@mydomainname.onmicrosoft.com")
 
 	![Signing in with an organization admin account](images/signing-in-with-an-organization-admin-account.png?raw=true "Signing in with an organization admin account")
 
 	_Signing in with an organization admin account_
 
-1. Back in **New ASP.Net Project** dialog, click **Create Project** button.
+1. Back in the **New ASP.Net Project** dialog, click **OK**.
 
 	![Completing the project creation](images/creating-the-project.png?raw=true "Completing the project creation")
 
 	_Completing the project creation_
 
-	> **Speaking Point:** VS tooling configures two-way trust relationship between your app and your WAAD tenant. Your app is registered as a Relying Party of the tenant; and the tenant is configured as an Identity Provider of the app.
+	> **Speaking Point:** VS tooling configures two-way trust relationship between your app and your WAAD tenant. Your app is registered as a Relying Party in the tenant; and the tenant is configured as an Identity Provider for the app.
 
-1. **CTRL+F5** to run the web site.
+1. Press **CTRL+F5** to run the web site.
+
+1. If a certificate error is displayed, click **Continue to this website**.
 
 1.	Sign in using a user account for your organization (ex. "user@mydomainname.onmicrosoft.com").
 
@@ -132,13 +138,13 @@ This demo is composed of the following segments:
 
 	_Signing in using one of the organization's user account_
 
-1. Show that you are loggued as the organization's user. 
+1. Show that you are logged as the organization's user. 
 
 	![Showing that you are logged as the organization's user](images/showing-the-organization-user-logged.png?raw=true "Showing that you are logged as the organization's user")
 
 	_Showing that you are logged as the organization's user_
 
-1. Close the browser
+1. Close the browser.
 
 <a name="segment2" />
 ### Running the organization's GeekQuiz ###
@@ -157,7 +163,7 @@ This demo is composed of the following segments:
 
 	_Importing the publish profile_
 
-1. In the **Import Publish Profile** dialog select **Import from a publish profile file** and click on **Browse...** to select the previously downloaded publish profile file.
+1. In the **Import Publish Profile** dialog select **Import from a publish profile file** and click **Browse...** to select the previously downloaded publish profile file.
 
 	![Selecting the publish profile file](images/selecting-import-publish-profile.png?raw=true "Selecting the publish profile file")
 
@@ -165,7 +171,7 @@ This demo is composed of the following segments:
 
 1. Back in the **Import Publish Profile** dialog click **OK**.
 
-1. Back in the **Publish Web** dialog, click **Next >**.
+1. Back in the **Publish Web** dialog, click **Next**.
 
 	![Reviewing the connection settings to deploy](images/reviewing-the-connection-settings-to-deploy.png?raw=true "Reviewing the connection settings to deploy")
 
@@ -179,19 +185,19 @@ This demo is composed of the following segments:
 
 1. Select the connection string for the **TriviaContext** and click **Publish** to publish the site.
 
-1. Sing in using an admin account for your organization (ex. "admin@mydomainname.onmicrosoft.com")
+1. Once the browser is opened, sign in using an admin account for your organization (e.g.: "admin@mydomainname.onmicrosoft.com")
 
 	![Signing in with an organization admin account](images/signing-in-with-an-organization-admin-account.png?raw=true "Signing in with an organization admin account")
 
 	_Signing in with an organization admin account_
 
-1.	When the deployment is completed, sign in using a user account for your organization (ex. "user@mydomainname.onmicrosoft.com").
+1.	When the deployment is completed, sign in using a user account for your organization (e.g.: "user@mydomainname.onmicrosoft.com").
 
 	![Signing in using one of the organization's user account](images/logging-in-with-an-organization-user.png?raw=true "Signing in using one of the organization's user account")
 
 	_Signing in using one of the organization's user account_
 
-1. Show that you are loggued as the organization's user. 
+1. Show that you are logged as the organization's user. 
 
 	![Showing that you are logged as the organization's user](images/showing-the-geekquiz-with-waad.png?raw=true "Showing that you are logged as the organization's user")
 
@@ -212,7 +218,7 @@ This demo is composed of the following segments:
 
 	_Showing the organization's users_
 
-1. Navigate to the **APPLICATIONS** tab and show the new two applications.
+1. Navigate to the **APPLICATIONS** tab and show the new two applications, which were automatically created.
 
 	![Showing the organization's applications](images/showing-the-geekquiz-application-in-the-portal.png?raw=true "Showing the organization's applications")
 
