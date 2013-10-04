@@ -54,11 +54,11 @@ Follow these steps to setup your environment for the demo.
 ## Demo ##
 This demo is composed of the following segments:
 
-1. [Creating a new organization web site](#segment1).
+1. [Adding a new website to an organization](#segment1).
 1. [Running the organization's GeekQuiz](#segment2).
 
 <a name="segment1" />
-### Creating a new organization web site ###
+### Adding a new website to an organization ###
 
 1. Open the **File / New Project** dialog and select the **Visual C# / Web** templates.
 
